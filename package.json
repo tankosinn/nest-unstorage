@@ -1,7 +1,7 @@
 {
   "name": "nest-unstorage",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "packageManager": "pnpm@11.6.0",
   "description": "Type-safe unstorage integration for NestJS with an injectable, driver-based key-value storage.",
   "author": "Tankosin <tankosinn@gmail.com>",
