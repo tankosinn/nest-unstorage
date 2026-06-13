@@ -1,0 +1,92 @@
+{
+  "name": "nest-unstorage",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@11.6.0",
+  "description": "Type-safe unstorage integration for NestJS with an injectable, driver-based key-value storage.",
+  "author": "Tankosin <tankosinn@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/tankosin/nest-unstorage#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tankosin/nest-unstorage.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tankosin/nest-unstorage/issues"
+  },
+  "keywords": [
+    "nestjs",
+    "nest",
+    "unstorage",
+    "unjs",
+    "nitro",
+    "storage",
+    "key-value",
+    "kv",
+    "cache",
+    "driver",
+    "dynamic-module"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.cts",
+      "default": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.cts",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18.12.0"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "lint": "eslint --cache .",
+    "lint:fix": "eslint --cache --fix .",
+    "test": "vitest run",
+    "test:cov": "vitest run --coverage",
+    "test:e2e": "vitest run --project e2e",
+    "test:unit": "vitest run --project unit",
+    "typecheck": "tsc --noEmit",
+    "prepare": "simple-git-hooks",
+    "prepublishOnly": "pnpm run build",
+    "publish:ci": "tsx scripts/publish.ts",
+    "release": "bumpp"
+  },
+  "peerDependencies": {
+    "@nestjs/common": "^10.0.0 || ^11.0.0",
+    "reflect-metadata": "^0.1.13 || ^0.2.0",
+    "unstorage": "^1.10.0"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^9.0.0",
+    "@nestjs/common": "^11.1.26",
+    "@nestjs/core": "^11.1.26",
+    "@nestjs/testing": "^11.1.26",
+    "@types/node": "^25.6.2",
+    "@vitest/coverage-v8": "4.1.8",
+    "bumpp": "^11.1.0",
+    "eslint": "^10.4.1",
+    "installed-check": "^10.0.1",
+    "lint-staged": "^17.0.7",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2",
+    "simple-git-hooks": "^2.13.1",
+    "tsdown": "^0.22.0",
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3",
+    "unstorage": "^1.17.5",
+    "vitest": "^4.1.5"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --cache --fix"
+  }
+}
