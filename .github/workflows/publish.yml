@@ -27,6 +27,7 @@ jobs:
         with:
           node-version: lts/*
           cache: pnpm
+          registry-url: 'https://registry.npmjs.org'
 
       - name: Update npm to latest
         run: npm i -g npm@latest
@@ -43,4 +44,6 @@ jobs:
       - name: Publish package to npm
         run: pnpm run publish:ci
         env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          NPM_CONFIG_PROVENANCE: true
           NODE_OPTIONS: --max-old-space-size=6144
