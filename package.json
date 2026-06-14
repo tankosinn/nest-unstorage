@@ -6,13 +6,13 @@
   "description": "Type-safe unstorage integration for NestJS with an injectable, driver-based key-value storage.",
   "author": "Tankosin <tankosinn@gmail.com>",
   "license": "MIT",
-  "homepage": "https://github.com/tankosin/nest-unstorage#readme",
+  "homepage": "https://github.com/tankosinn/nest-unstorage#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tankosin/nest-unstorage.git"
+    "url": "git+https://github.com/tankosinn/nest-unstorage.git"
   },
   "bugs": {
-    "url": "https://github.com/tankosin/nest-unstorage/issues"
+    "url": "https://github.com/tankosinn/nest-unstorage/issues"
   },
   "keywords": [
     "nestjs",

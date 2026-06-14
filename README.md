@@ -55,7 +55,7 @@ StorageModule.forRootAsync({
 
 ## License
 
-[MIT](./LICENSE) License © [Tankosin](https://github.com/tankosin)
+[MIT](./LICENSE) License © [Tankosin](https://github.com/tankosinn)
 
 <!-- Badges -->
 
